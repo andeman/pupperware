@@ -2,7 +2,7 @@ FROM centos/systemd:latest
 
 RUN rpm -Uvh https://yum.puppetlabs.com/puppet6-release-el-7.noarch.rpm && \
     #yum upgrade -y && \
-    yum update -y && \
+    #yum update -y && \
     yum -y install puppet-agent && \
     yum clean all && \
     /opt/puppetlabs/bin/puppet config set server puppet && \
