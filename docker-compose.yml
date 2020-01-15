@@ -82,6 +82,7 @@ services:
       context: .
       dockerfile: docker/puppetagent/centos7/Dockerfile
     hostname: puppetagent.${DOMAIN:-test}
+    privileged: true
     #image: centos/systemd:${PUPPETAGENT_VERSION:-latest}
     dns_search: ${DOMAIN:-test}
     networks:
